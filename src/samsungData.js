@@ -18,7 +18,7 @@ const displaySamsung =(samPhone)=>{
                     <div class="card-body">
                       <h2 class="card-title">${phone.phone_name
                       }</h2>
-                      <p> ${phone.brand}If a dog ${phone.slug} does he choose?</p>
+                      <p> ${phone.brand} ${phone.slug} does he choose?</p>
                       <div class="card-actions justify-end">
                         <button class="btn btn-success">Buy Now</button>
                       </div>

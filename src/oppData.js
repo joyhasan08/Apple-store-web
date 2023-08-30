@@ -19,7 +19,8 @@ let oppoDisplay = (oppo) =>{
                 <div class="card-body">
                   <h2 class="card-title">${oppoPhone.phone_name
                   }</h2>
-                  <p> ${oppoPhone.brand}If a dog ${oppoPhone.slug} does he choose?</p>
+                  <p> ${oppoPhone.brand}  does he choose?</p>
+                  <p>${oppoPhone.slug}</p>
                   <div class="card-actions justify-end">
                     <button class="btn btn-success">Buy Now</button>
                   </div>

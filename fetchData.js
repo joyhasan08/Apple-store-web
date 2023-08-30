@@ -1,6 +1,6 @@
 console.log(`conneted`);
 const iphoneContainer = document.getElementById(`iphone-container`);
-
+const cerusolDisplay =document.getElementById(`cerusol-display`);
 const iphoneData = ()=>{
     fetch(`https://openapi.programming-hero.com/api/phones?search=iphone`)
     .then(res => res.json())
@@ -11,7 +11,7 @@ const displayIphone = (phones)=>{
     console.log(phones);
    phones.data.map(element => {
     // console.log(element);
-    console.log(element.image);
+    console.log(element);
     const div = document.createElement(`div`);
     div.innerHTML = `
     <div  class="w-fit mx-auto"> 
@@ -29,7 +29,20 @@ const displayIphone = (phones)=>{
         </div>
         `
         iphoneContainer.appendChild(div)
+        carusol(element);
 
    });
 }
 iphoneData()
+
+function carusol (element){
+console.log(element.image);
+const imgdiv = document.createElement(`div`);
+imgdiv.classList= `carousel-item`;
+imgdiv.innerHTML =`
+
+<img src="${element.image}" class="rounded-box" />
+
+`
+cerusolDisplay.appendChild(imgdiv);
+}
