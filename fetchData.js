@@ -8,26 +8,28 @@ const iphoneData = ()=>{
 }
 
 const displayIphone = (phones)=>{
-    // console.log(phones.data);
-    phones.data.map(element => {
-        // console.log(element);
-        const iphoneDiv = document.createAttribute('div');
-        iphoneDiv.innerHTML = `
-        <div  class="w-fit mx-auto"> 
-                <div class="card w-72 bg-base-100 shadow-xl">
-                    <figure><img src="./img/portet  (3).jpg" alt="Shoes" /></figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
+    console.log(phones);
+   phones.data.map(element => {
+    // console.log(element);
+    console.log(element.image);
+    const div = document.createElement(`div`);
+    div.innerHTML = `
+    <div  class="w-fit mx-auto"> 
+            <div class="card w-72 bg-base-100 shadow-xl">
+                <figure><img class="p-3" src="${element.image}" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">${element.phone_name
+                  }</h2>
+                  <p> ${element.brand}If a dog ${element.slug} does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-success">Buy Now</button>
                   </div>
-            </div>
-            `
-            console.log(iphoneDiv);
-            // iphoneContainer.appendChild(iphoneDiv);
-    })
+                </div>
+              </div>
+        </div>
+        `
+        iphoneContainer.appendChild(div)
+
+   });
 }
 iphoneData()
