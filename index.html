@@ -23,20 +23,20 @@
 <body>
     <header>
      <nav class=" lg:fixed   lg:w-full z-10">
-        <div><div class="navbar flex flex-col-reverse md:flex-row justify-between lg:px-8 bg-base-300 rounded-b-xl">
-            <div class="py-2 md:py-0">
+        <div><div class="navbar flex flex-col md:flex-row justify-between lg:px-8 bg-base-300 rounded-b-xl">
+            <div class="py-2 md:py-0  md:block">
               <a class="  normal-case text-2xl font-semibold "> <span class="px-3"><i class="fa-brands fa-apple fa-xl lg:fa-2xl " style="color: #000000;"></i></span>gets<span class="text-orange-500">G</span>ear</a>
             </div>
             <div class="flex-none gap-2">
               <div class="form-control">
-                <input type="text" placeholder="Search" class="input input-sm md:input-md input-bordered w-24 md:w-auto " />
+                <input type="text" placeholder="Search" class="input input-md md:input-md input-bordered w-24 md:w-auto hover:border-orange-500 border-2 " />
               </div>
               <div class=" flex gap-2">
-               <a href=""> <i  class="fa-solid fa-cart-plus   fa-xl"></i></a> <!-- fa-bounce -->
-               <a href=""><i class="fa-solid fa-right-to-bracket fa-xl"></i></a>
+               <a class="btn btn-circle " href=""> <i  class="fa-solid fa-cart-plus   fa-xl"></i></a> <!-- fa-bounce -->
+               <a class="btn btn-circle " href=""><i class="fa-solid fa-right-to-bracket fa-xl"></i></a>
               </div>
               <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <label tabindex="0" class="btn btn-ghost btn-circle  avatar">
                   <div class="w-10  rounded-full">
                     <img src="./img/Xbox one avatar creature.jpg" />
                   </div>
@@ -48,8 +48,10 @@
                       <span class="badge">New</span>
                     </a>
                   </li>
+                  <img class="rounded-lg " src="./img/portet  (4).jpg" alt="">
                   <li><a>Settings</a></li>
                   <li><a>Logout</a></li>
+                  
                 </ul>
               </div>
             </div>
@@ -58,12 +60,22 @@
      </nav>
      <section>
       <!-- hero section  -->
-        <div class="px-10 pt-5 pb-2 ">
+        <div class=" flex flex-col md:flex-row gap-6 px-10 pt-5 lg:pt-24 pb-2 lg:pb-0 ">
             <div class="hero rounded-2xl  min-h-[300px] lg:min-h-[500px]" style="background-image: url(./img/portet\ \ \(2\).jpg);">
                 <div class="hero-overlay rounded-2xl bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
                     <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem etin.</p>
+                    <!-- <button class="btn btn-primary">Get Started</button> -->
+                  </div>
+                </div>
+              </div>
+            <div class="hero    rounded-2xl  min-h-[300px] lg:min-h-[500px]" style="background-image: url(./img/portet\ \ \(3\).jpg);">
+                <div class="hero-overlay  rounded-2xl bg-opacity-60"></div>
+                <div class="hero-content   text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl  font-bold">Gears</h1>
                     <p class="mb-5">Provident cupiditate voluptatem etin.</p>
                     <!-- <button class="btn btn-primary">Get Started</button> -->
                   </div>
@@ -85,11 +97,12 @@
       <!-- phone bar  -->
       <header class="text-gray-600 body-font  md:pb-3">
         
-        <div class="container  w-fit mx-auto  flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <div class="container  w-fit mx-auto  flex flex-wrap  p-5  md:flex-row items-center">
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href="./index.html" class="mr-5 hover:text-gray-900 btn">Apple</a>
-            <a href="./src/opp.html" class="mr-5 hover:text-gray-900 btn ">Oppo</a>
-            <a href="./src/samsung.html" class="mr-5 hover:text-gray-900 btn">samsung</a>
+            <a href="./index.html" class="mr-5 hover:text-gray-900 btn hover:bg-orange-500">Apple</a>
+            <a href="./src/opp.html" class="mr-5 hover:text-gray-900 btn  hover:bg-orange-500 ">Oppo</a>
+            <a href="./src/samsung.html" class="mr-5 mt-4 md:mt-0 hover:text-gray-900 btn  hover:bg-orange-500">samsung</a>
+            
             
           </nav>
         </div>
