@@ -22,7 +22,7 @@ let oppoDisplay = (oppo) =>{
                   <p> ${oppoPhone.brand}  does he choose?</p>
                   <p>${oppoPhone.slug}</p>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-success">Buy Now</button>
+                    <button class="btn btn-success bg-orange-300 border-none">Buy Now</button>
                   </div>
                 </div>
               </div>

@@ -20,7 +20,7 @@ const displaySamsung =(samPhone)=>{
                       }</h2>
                       <p> ${phone.brand} ${phone.slug} does he choose?</p>
                       <div class="card-actions justify-end">
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success bg-orange-300 border-none">Buy Now</button>
                       </div>
                     </div>
                   </div>
