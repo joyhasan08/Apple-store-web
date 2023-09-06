@@ -21,3 +21,9 @@ console.log(b);
 const a1 = 2 == 0 ? true : false
 console.log(a1);
 
+function multiple (num1 , num2){
+    return num1*num2
+  }
+  
+  const result = multiple(2,2);
+  console.log(result);
