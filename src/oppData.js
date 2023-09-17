@@ -9,9 +9,10 @@ const getOppoData = ()=>{
 
 let oppoDisplay = (oppo) =>{
     console.log(oppo);
-    oppo.data.map(oppoPhone =>{
+    oppo.data.forEach(oppoPhone =>{
         console.log(oppoPhone);
         const div = document.createElement(`div`);
+        
          div.innerHTML = `
         <div  class="w-fit mx-auto"> 
             <div class="card w-72 bg-base-100 shadow-xl">

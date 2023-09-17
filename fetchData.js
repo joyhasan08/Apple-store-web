@@ -1,9 +1,10 @@
 console.log(`conneted`);
+let phoneInfo =[] ;
 
 const iphoneContainer = document.getElementById(`iphone-container`);
 const cerusolDisplay =document.getElementById(`cerusol-display`);
 const iphoneData = async ()=>{
-   await fetch(`https://openapi.programming-hero.com/api/phones?search=iphone`)
+   await fetch(`https://openapi.programming-hero.com/api/phones?search=apple`)
     .then(res => res.json())
     .then( json => displayIphone(json))
 }
@@ -24,7 +25,7 @@ const displayIphone = async (phones)=>{
       temp.push(phones.data[i])
     }
     page1.push(temp);
-    console.log(page1);
+    // console.log(page1);
     
    phones.data.map(async element => {
     // console.log(element);
@@ -45,21 +46,29 @@ const displayIphone = async (phones)=>{
                   }</h2>
                   <p> ${element.brand}If a dog <span class="overflow-x-hidden">${element.slug}</span>does he choose?</p>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-success bg-orange-300 border-none">Buy Now</button>
+                    <button class="btn btn-success mx-auto my-4 bg-orange-300 border-none">Buy Now</button>
                   </div>
                 </div>
               </div>
         </div>
         `
+        
         iphoneContainer.appendChild(div)
         carusol(element);
-
         let phoneDetails = await phoneSpec(element);
-        console.log(phoneDetails);
+        // console.log(phoneDetails);
+// phone infor tab ---------------------
+        phoneInfo = element.slug;
+        fetch (`https://openapi.programming-hero.com/api/phone/${phoneInfo}`)
+        .then(res => res.json())
+        .then (json = showinfo = (json)=>{
+          console.log(json);
+        } )
 
    });
 }
 iphoneData()
+
 
 function carusol (element){
 // console.log(element.slug);
@@ -82,7 +91,7 @@ const phoneSpec =async (element)=>{
     // console.log(json.data.name);
     // slugData = json.data;
     const slugData =json?.data;
-    console.log(slugData);
+    // console.log(slugData);
     return slugData;
   })
 }
